@@ -1,5 +1,5 @@
 {
-  "name": "react-native-tab-view",
+  "name": "@yadagency/react-native-tab-view",
   "version": "2.15.1",
   "description": "Tab view component for React Native",
   "main": "lib/commonjs/index.js",
@@ -17,10 +17,10 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn",
-    "prepare": "yarn bootstrap && bob build"
+    "prepare": "yarn example && bob build"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/yadagency"
   },
   "keywords": [
     "react-native-component",
