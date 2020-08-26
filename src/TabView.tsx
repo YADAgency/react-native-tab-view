@@ -29,6 +29,7 @@ export type Props<T extends Route> = PagerCommonProps & {
   renderScene: (
     props: SceneRendererProps & {
       route: T;
+      active: boolean;
     }
   ) => React.ReactNode;
   renderLazyPlaceholder: (props: { route: T }) => React.ReactNode;
@@ -195,6 +196,7 @@ export default class TabView<T extends Route> extends React.Component<
                             : renderScene({
                                 ...sceneRendererProps,
                                 route,
+                                active: i === navigationState.index,
                               })
                         }
                       </SceneView>

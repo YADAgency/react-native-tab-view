@@ -13,13 +13,19 @@ class SceneComponent<
 export default function SceneMap<T extends any>(scenes: {
   [key: string]: React.ComponentType<T>;
 }) {
-  return ({ route, jumpTo, position }: SceneRendererProps & { route: any }) => (
+  return ({
+    route,
+    jumpTo,
+    position,
+    active,
+  }: SceneRendererProps & { route: any; active: boolean }) => (
     <SceneComponent
       key={route.key}
       component={scenes[route.key]}
       route={route}
       jumpTo={jumpTo}
       position={position}
+      active={active}
     />
   );
 }
